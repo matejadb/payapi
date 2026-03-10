@@ -1,1 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
+
+@theme {
+	--font-display: 'DM Serif Display', serif;
+	--font-public: 'Public Sans', sans-serif;
+
+	--color-neutral-950: #000000;
+	--color-neutral-300: #d8d8d8;
+	--color-neutral-0: #ffffff;
+
+	--color-slate-950: #1b262f;
+	--color-slate-900: #213648;
+	--color-slate-800: #2e3f4d;
+	--color-slate-700: #36536b;
+	--color-slate-600: #527695;
+	--color-slate-500: #6c8294;
+	--color-slate-100: #edf3f8;
+	--color-slate-50: #fbfcfe;
+
+	--color-rose-600: #ba4270;
+	--color-rose-400: #da6d97;
+
+	--gradient-1: linear-gradient(
+		180deg,
+		#9cb6cd 0%,
+		#9ab3ca 42%,
+		#557496 71%,
+		#475178 100%
+	);
+	--gradient-2: linear-gradient(180deg, #454545 0%, #999999 23%, #ffffff 100%);
+	--gradient-3: linear-gradient(
+		270deg,
+		#ffffff00 0%,
+		#bababa 15%,
+		#ffffff00 38%,
+		#ffffff00 69%
+	);
+}
