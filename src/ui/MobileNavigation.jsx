@@ -9,20 +9,26 @@ function MobileNavigation() {
 	const [isOpen, setIsOpen] = useState();
 
 	const toggleMenu = () => {
+		console.log('click');
 		setIsOpen((open) => !open);
 	};
 	return (
-		<nav className="flex items-center justify-between bg-red-500 sm:hidden">
-			<img src={Logo} alt="" />
+		<nav className="flex items-center justify-between sm:hidden ">
+			<NavLink to="home">
+				<img src={Logo} alt="PayAPI logo" />
+			</NavLink>
 
-			<button onClick={toggleMenu}>
+			<button type="button" onClick={toggleMenu}>
 				<img src={BurgerMenu} alt="Burger menu icon." />
 			</button>
 
 			<ul
-				className={`${isOpen ? 'flex' : 'hidden'} absolute bg-slate-950 px-8.25 pt-12.25 right-0 top-0 min-h-screen `}>
+				className={`${isOpen ? 'flex' : 'hidden'} absolute bg-slate-950 px-8.25 pt-12.25 right-0 top-0 min-h-screen`}>
 				<div className="flex flex-col w-full">
-					<button onClick={toggleMenu} className="size-5.5 mb-6 self-end">
+					<button
+						type="button"
+						onClick={toggleMenu}
+						className="size-5.5 mb-6 self-end">
 						<img src={CloseButton} alt="Close menu icon." />
 					</button>
 
@@ -55,7 +61,9 @@ function MobileNavigation() {
 							</li>
 						</div>
 
-						<button className="rounded-full bg-rose-600 font-public font-bold text-[15px] leading-[1.2] text-neutral-50 px-6 py-4">
+						<button
+							type="button"
+							className="rounded-full bg-rose-600 font-public font-bold text-[15px] leading-[1.2] text-neutral-50 px-6 py-4">
 							Schedule a Demo
 						</button>
 					</div>
